@@ -1,9 +1,12 @@
 -- ==============================================================================
 -- ADI - PRÁCTICA 1: DATOS SEMILLA (SEED DATA)
 -- Proyecto: Gestor de Torneos y Ligas de Videojuegos
--- Nota: Para que las claves foráneas a auth.users funcionen en un entorno real,
--- se debe registrar previamente un usuario organizador en Supabase Auth.
--- Este script incluye datos listos para pruebas con IDs de ejemplo.
+-- ==============================================================================
+-- Instrucciones:
+-- 1. Primero ve a "Authentication -> Users" en Supabase y crea al menos un usuario
+--    (por ejemplo: organizador@torneos.com con Auto-confirm activo).
+-- 2. Pega y ejecuta este bloque completo en el "SQL Editor" de Supabase.
+--    El script detectará automáticamente tu usuario y creará torneos y equipos.
 -- ==============================================================================
 
 -- Ejemplo de inserción de torneo (suponiendo un organizador existente)
