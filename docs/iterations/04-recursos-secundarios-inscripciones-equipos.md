@@ -77,4 +77,4 @@ Se ajustó la comprobación de cancelación para admitir explícitamente tanto a
 ---
 
 ## COMMITS RELACIONADOS
-- `4d5e67f` - Implementación de servicios para recursos secundarios: equipos e inscripciones con control de plazas
+- `f162032` - feat(inscripciones): Iteracion 04 - Servicios de equipos e inscripciones con control de aforo y capitania

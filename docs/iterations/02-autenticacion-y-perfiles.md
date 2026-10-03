@@ -76,4 +76,4 @@ Se corrigió la estructura del mock de Supabase para soportar el encadenamiento 
 ---
 
 ## COMMITS RELACIONADOS
-- `2b3c45d` - Implementación de authService, autenticación con tokens JWT y gestión de perfiles
+- `1ebb18c` - feat(auth): Iteracion 02 - Implementacion de authService con JWT y gestion de perfiles

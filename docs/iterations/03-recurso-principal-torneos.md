@@ -78,4 +78,4 @@ Se ajustó el fallback de consulta de torneos para prevenir errores cuando la re
 ---
 
 ## COMMITS RELACIONADOS
-- `3c4d56e` - Implementación de torneoService para recurso principal con paginación, filtros y relaciones
+- `ec963de` - feat(torneos): Iteracion 03 - CRUD, filtros, paginacion y detalle con relaciones del recurso principal

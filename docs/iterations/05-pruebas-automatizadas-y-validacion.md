@@ -78,4 +78,4 @@ Se validó manualmente la salida de consola de `npm test` verificando que las 34
 ---
 
 ## COMMITS RELACIONADOS
-- `5e6f78a` - Configuración final de pruebas automatizadas, mocks offline y documentación de validación SDD
+- `ed2e263` - test(qa): Iteracion 05 - Suite completa de 34 pruebas con Vitest, simulador de Supabase y documentacion SDD

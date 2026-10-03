@@ -73,4 +73,4 @@ Se ajustó el campo `tag` de los equipos para restringir su longitud entre 2 y 6
 ---
 
 ## COMMITS RELACIONADOS
-- `1a0f12a` - Configuración inicial del proyecto, esquema SQL para Supabase y arquitectura SDD
+- `ccedb75` - feat(setup): Iteracion 01 - Configuracion inicial, modelo relacional en Supabase y arquitectura SDD
