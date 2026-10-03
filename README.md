@@ -28,7 +28,7 @@ El backend está desarrollado sobre **Supabase (BaaS)** mediante una **Capa de S
 | **Recurso Principal con Secundario** | Consulta de torneo por ID incluyendo inscripciones y partidas relacionadas | [`src/services/torneoService.js`](file:///c:/Users/User/Desktop/uni/ADI/ADI-PRACTICA/src/services/torneoService.js) |
 | **Recurso Secundario** | Creación y listado de equipos; inscripción con control de cupo y capitanía; cancelación | [`src/services/inscripcionService.js`](file:///c:/Users/User/Desktop/uni/ADI/ADI-PRACTICA/src/services/inscripcionService.js) |
 | **Capa de Servicios Desacoplada** | Ningún componente consumidor necesita conocer el SDK directo de Supabase | [`src/services/index.js`](file:///c:/Users/User/Desktop/uni/ADI/ADI-PRACTICA/src/services/index.js) |
-| **Pruebas Automatizadas** | 34 tests unitarios y de integración con Vitest (100% éxito) | [`tests/`](file:///c:/Users/User/Desktop/uni/ADI/ADI-PRACTICA/tests) |
+| **Pruebas Automatizadas** | 45 tests unitarios y de integración con Vitest (100% éxito) y cobertura v8 | [`tests/`](file:///c:/Users/User/Desktop/uni/ADI/ADI-PRACTICA/tests) |
 | **Documentación SDD** | Especificaciones, planes, tests logs y commits por cada iteración | [`docs/`](file:///c:/Users/User/Desktop/uni/ADI/ADI-PRACTICA/docs) |
 
 ---
@@ -82,12 +82,19 @@ npm test
 
 Salida esperada:
 ```text
-✓ tests/authService.test.js (10 tests)
-✓ tests/inscripcionService.test.js (10 tests)
-✓ tests/torneoService.test.js (14 tests)
+ ✓ tests/servicesIndex.test.js (2 tests)
+ ✓ tests/equipoService.test.js (12 tests)
+ ✓ tests/authService.test.js (10 tests)
+ ✓ tests/inscripcionService.test.js (7 tests)
+ ✓ tests/torneoService.test.js (14 tests)
 
-Test Files  3 passed (3)
-Tests       34 passed (34)
+ Test Files  5 passed (5)
+ Tests       45 passed (45)
+```
+
+Para generar la tabla de cobertura de código (Code Coverage) ejecutada con `@vitest/coverage-v8`:
+```bash
+npm run test:coverage
 ```
 
 ---
