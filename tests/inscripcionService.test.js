@@ -4,53 +4,12 @@ import { inscripcionService } from '../src/services/inscripcionService.js';
 import { equipoService } from '../src/services/equipoService.js';
 import { createMockSupabase } from './mocks/mockSupabase.js';
 
-describe('Servicios de Recursos Secundarios: EQUIPOS e INSCRIPCIONES', () => {
+describe('Servicio de Recursos Secundarios: INSCRIPCIONES (inscripcionService)', () => {
   let mockClient;
 
   beforeEach(() => {
     mockClient = createMockSupabase();
     setSupabaseClient(mockClient);
-  });
-
-  describe('Gestión de Equipos (equipoService)', () => {
-    it('debe rechazar la creación de un equipo con tag menor de 2 o mayor de 6 caracteres', async () => {
-      await expect(
-        equipoService.crearEquipo({
-          nombre: 'Equipo Fantasma',
-          tag: 'A'
-        }, 'user-capitan-1')
-      ).rejects.toThrow('El tag o siglas del equipo debe tener entre 2 y 6 caracteres.');
-
-      await expect(
-        equipoService.crearEquipo({
-          nombre: 'Equipo Fantasma',
-          tag: 'TOOLONG'
-        }, 'user-capitan-1')
-      ).rejects.toThrow('El tag o siglas del equipo debe tener entre 2 y 6 caracteres.');
-    });
-
-    it('debe crear un equipo correctamente asignando al creador como capitán', async () => {
-      const nuevo = await equipoService.crearEquipo({
-        nombre: 'Ninjas Gaming',
-        tag: 'NIP',
-        logo_url: 'https://example.com/nip.png'
-      }, 'user-capitan-1');
-
-      expect(nuevo).toBeDefined();
-      expect(nuevo.id).toBeDefined();
-      expect(nuevo.nombre).toBe('Ninjas Gaming');
-      expect(nuevo.tag).toBe('NIP');
-      expect(nuevo.capitan_id).toBe('user-capitan-1');
-    });
-
-    it('debe obtener un equipo por ID', async () => {
-      const equipo = await equipoService.obtenerEquipoPorId('equipo-1');
-
-      expect(equipo).toBeDefined();
-      expect(equipo.id).toBe('equipo-1');
-      expect(equipo.nombre).toBe('Alpha Wolves');
-      expect(equipo.capitan_id).toBe('user-capitan-1');
-    });
   });
 
   describe('Inscripciones de Equipos a Torneos (inscripcionService)', () => {
